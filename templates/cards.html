@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Cards {% endblock %}
+
+{% block body %}
+
+<div>
+  <h2>Add New Trading Card</h2>
+
+  <form action="/add-card" method="POST">
+    Name: <input type="text" name="name" id="nameField"><br>
+    Skill: <input type="text" name="skill" id="skillField"><br>
+    <!-- Image: <input type="text" name="image" id="imageField" value="It's optional"><br> -->
+    Image: <input type="text" name="image" id="imageField"><br>
+    <button id="addCard">Add</button>
+  </form>
+
+  <h2>Trading Cards</h2>
+</div>
+
+<div id="container"></div>
+{% endblock %}
+
+{% block js %}
+<script src="/static/js/tradingCard.jsx" type="text/jsx"></script>
+{% endblock %}
