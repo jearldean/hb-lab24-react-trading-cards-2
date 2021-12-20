@@ -39,9 +39,9 @@ function AddTradingCard(props) {
 
       <label htmlFor="imageInput">Image</label>
       <input
-        value={image}
+        value={imgUrl}
         onChange={(event) => setImage(event.target.value)}
-        id="imgUrl"
+        id="imgUrlInput"
         style={{ marginLeft: "5px" }}
       ></input>
 

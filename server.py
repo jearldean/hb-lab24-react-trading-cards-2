@@ -80,12 +80,14 @@ def add_card():
     """Add a new card to the DB."""
     name = request.form.get("name")
     skill = request.form.get("skill")
-    ## Future: To add custom img, we'll have to edit this later.
+    image = request.form.get("image")
+    if not image:
+        image = "/static/img/placeholder.png"
 
     new_card = {
         "name": name,
         "skill": skill,
-        "imgUrl": "/static/img/placeholder.png",
+        "imgUrl": image,
         "cardId": len(CARD_DATA) + 1,
     }
     CARD_DATA.append(new_card)
